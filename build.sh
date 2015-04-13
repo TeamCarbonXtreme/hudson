@@ -79,7 +79,7 @@ then
   if [ ! -z $vendor_name ] && [ ! -z $device_name ]
   then
     # Workaround for failing translation checks in common device repositories
-    LUNCH=$(echo cm_$device_name-userdebug@$vendor_name | sed -f $WORKSPACE/hudson/androidarmv6-shared-repo.map)
+    LUNCH=$(echo cm_$device_name-userdebug@$vendor_name | sed -f $WORKSPACE/hudson/cxr-shared-repo.map)
   fi
   export LUNCH=$LUNCH
 fi
@@ -198,9 +198,9 @@ rm -f .repo/local_manifest.xml
 
 if [[ "$SYNC_PROTO" == "ssh" ]]
 then
-  repo init -u ssh://git@github.com/androidarmv6/android.git -b $CORE_BRANCH $MANIFEST
+  repo init -u ssh://git@github.com/TeamCarbonXtreme/carbonx.git -b $CORE_BRANCH $MANIFEST
 else
-  repo init -u $SYNC_PROTO://github.com/androidarmv6/android.git -b $CORE_BRANCH $MANIFEST
+  repo init -u $SYNC_PROTO://github.com/TeamCarbonXtreme/carbonx.git -b $CORE_BRANCH $MANIFEST
 fi
 check_result "repo init failed."
 

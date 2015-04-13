@@ -1,5 +1,5 @@
 # Accessing the Build Server
-http://jenkins.androidarmv6.org/
+http://tcarbonxtreme.tk/
 
 # Authenticating to the Build Server
 You must be a member of the androidarmv6 organization.  
@@ -25,12 +25,12 @@ Your build machine must also be completely/properly set up to support building A
 You can also configure your node to only perform builds during certain hours. This will prevent your machine from being swamped when during the hours you are planning on using it.  
 
 The login provided should use allow access to the following public key via the authorized_keys file:  
-https://github.com/androidarmv6/hudson/blob/master/authorized_keys  
+https://github.com/TeamCarbonXtreme/hudson/blob/master/authorized_keys  
 
 # Jenkins Job Setup
 The job uses the following script:
 
 ```bash
-curl -O -L https://raw.github.com/androidarmv6/hudson/master/job.sh
+curl -O -L https://raw.github.com/TeamCarbonXtreme/hudson/master/job.sh
 . ./job.sh
 ```
